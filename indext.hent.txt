@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/MI CINEMA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">AI/MI <span>CINEMA</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#movies">Movies</a>
+        <a href="#series">TV Series</a>
+        <a href="#categories">Categories</a>
+        <a href="#favorites">Favorites</a>
+    </nav>
+
+    <div class="header-search">
+        <input id="mainSearch"
+        type="search"
+        placeholder="What do you want to watch today?">
+        <button onclick="searchMovies()">⌕</button>
+    </div>
+</header>
+
+<!-- TOP MOVIE POSTER SECTION -->
+<section class="poster-strip" id="home">
+    <div class="poster-heading">
+        <h2>WELCOME TO AI/MI CINEMA</h2>
+        <p>Discover your next favorite movie</p>
+    </div>
+
+    <div class="top-posters">
+        <img src="https://image.tmdb.org/t/p/w342/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg">
+        <img src="https://image.tmdb.org/t/p/w342/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg">
+        <img src="https://image.tmdb.org/t/p/w342/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg">
+        <img src="https://image.tmdb.org/t/p/w342/6Wdl9N6dL0Hi0T1qJLWSz6gMLbd.jpg">
+        <img src="https://image.tmdb.org/t/p/w342/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
+    </div>
+</section>
+
+<div class="red-line"></div>
+
+<!-- MAIN SEARCH -->
+<section class="hero">
+    <p class="red-text">YOUR CINEMA. YOUR WORLD.</p>
+    <h1>Unlimited Movies.<br>
+        <span>Unlimited Entertainment.</span>
+    </h1>
+
+    <div class="big-search">
+        <input id="heroSearch"
+        type="search"
+        placeholder="Search movies, TV shows, seasons...">
+        <button onclick="searchMovies()">SEARCH</button>
+    </div>
+
+    <p class="small-text">
+        Search for movies, TV series and your favorite episodes.
+    </p>
+</section>
+
+<!-- SEARCH RESULTS -->
+<section class="content-section" id="resultsSection" hidden>
+    <h2>Search Results</h2>
+    <div class="movie-grid" id="results"></div>
+</section>
+
+<!-- MOVIE CATEGORIES -->
+<main id="categories">
+
+    <section class="content-section" id="movies">
+        <h2>🔥 Trending Movies</h2>
+        <div class="movie-grid" id="trending"></div>
+    </section>
+
+    <section class="content-section">
+        <h2>⭐ Popular Movies</h2>
+        <div class="movie-grid" id="popular"></div>
+    </section>
+
+    <section class="content-section">
+        <h2>💥 Action Movies</h2>
+        <div class="movie-grid" id="action"></div>
+    </section>
+
+    <section class="content-section">
+        <h2>🚀 Science Fiction</h2>
+        <div class="movie-grid" id="scifi"></div>
+    </section>
+
+    <section class="content-section">
+        <h2>🌎 Adventure Movies</h2>
+        <div class="movie-grid" id="adventure"></div>
+    </section>
+
+    <section class="content-section" id="series">
+        <h2>📺 Popular TV Series</h2>
+        <div class="movie-grid" id="tvshows"></div>
+    </section>
+
+    <section class="content-section">
+        <h2>🆕 Recently Added</h2>
+        <div class="movie-grid" id="recent"></div>
+    </section>
+
+    <section class="content-section" id="favorites">
+        <h2>❤️ My Favorites</h2>
+        <div class="movie-grid" id="favoriteMovies"></div>
+    </section>
+
+</main>
+
+<!-- DETAILS MODAL -->
+<div class="modal" id="detailsModal">
+    <div class="modal-box">
+        <button class="close" onclick="closeDetails()">✕</button>
+        <div id="detailsContent"></div>
+    </div>
+</div>
+
+<!-- VIDEO PLAYER -->
+<div class="player-modal" id="playerModal">
+    <div class="player-box">
+        <button class="close" onclick="closePlayer()">✕</button>
+        <h2 id="playerTitle">Now Playing</h2>
+
+        <video id="videoPlayer" controls playsinline>
+            Your browser does not support video.
+        </video>
+
+        <p class="small-text">
+            Use legally authorized video files or streaming sources.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <h2>AI/MI <span>CINEMA</span></h2>
+    <p>Your world of entertainment.</p>
+    <p>© 2026 AI/MI CINEMA. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
